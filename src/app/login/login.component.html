@@ -1,0 +1,31 @@
+<div class="container">
+  <form class="loginFormContainer mx-auto" [formGroup]="loginForm">
+    <div class="form-group row">
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="username"
+        placeholder="Username"
+      />
+    </div>
+    <div class="form-group row">
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group row">
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!loginForm.valid"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
